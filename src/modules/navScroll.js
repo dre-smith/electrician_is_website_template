@@ -3,12 +3,17 @@ const navScroll = () => {
     const scrollTo = (elem) => {
         document.querySelector(elem).scrollIntoView({
             behavior: 'smooth',
-            block: 'start'
+            block: 'start',
         });
     };
     body.addEventListener('click', (event) => {
         let target = event.target;
-        target.closest('.top-menu') ? event.preventDefault(target.closest('.top-menu a') ? scrollTo(target.closest('.top-menu a').getAttribute('href')) : '') : '';
+        if (target.closest('.top-menu')) {
+            event.preventDefault();
+            if (target.closest('.top-menu a')) {
+                scrollTo(target.closest('.top-menu a').getAttribute('href'));
+            };
+        };
     });
 };
 export default navScroll;
