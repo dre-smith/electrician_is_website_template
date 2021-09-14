@@ -38,7 +38,7 @@ eval("\nmodule.exports = function () {\n\treturn /[\\u001b\\u009b][[()#;?]*(?:[0
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_modalWindow__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/modalWindow */ \"./src/modules/modalWindow.js\");\n/* harmony import */ var _modules_navScroll__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/navScroll */ \"./src/modules/navScroll.js\");\n/* harmony import */ var _modules_slider__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/slider */ \"./src/modules/slider.js\");\n/* harmony import */ var _modules_sliderCarousel__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/sliderCarousel */ \"./src/modules/sliderCarousel.js\");\n/* harmony import */ var _modules_togglePopUp__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/togglePopUp */ \"./src/modules/togglePopUp.js\");\n/* harmony import */ var _modules_faq__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/faq */ \"./src/modules/faq.js\");\n/* harmony import */ var _modules_scrollUp__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/scrollUp */ \"./src/modules/scrollUp.js\");\n\n\n\n\n\n\n\n\n\n(0,_modules_modalWindow__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\n(0,_modules_navScroll__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();\n(0,_modules_slider__WEBPACK_IMPORTED_MODULE_2__[\"default\"])();\n(0,_modules_sliderCarousel__WEBPACK_IMPORTED_MODULE_3__[\"default\"])();\n(0,_modules_togglePopUp__WEBPACK_IMPORTED_MODULE_4__[\"default\"])();\n(0,_modules_faq__WEBPACK_IMPORTED_MODULE_5__[\"default\"])();\n(0,_modules_scrollUp__WEBPACK_IMPORTED_MODULE_6__[\"default\"])();\n\n//# sourceURL=webpack://electrician_is_website_template/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_togglePopUp__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/togglePopUp */ \"./src/modules/togglePopUp.js\");\n/* harmony import */ var _modules_form__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/form */ \"./src/modules/form.js\");\n/* harmony import */ var _modules_navScroll__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/navScroll */ \"./src/modules/navScroll.js\");\n/* harmony import */ var _modules_slider__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/slider */ \"./src/modules/slider.js\");\n/* harmony import */ var _modules_sliderCarousel__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/sliderCarousel */ \"./src/modules/sliderCarousel.js\");\n/* harmony import */ var _modules_faq__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/faq */ \"./src/modules/faq.js\");\n/* harmony import */ var _modules_scrollUp__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/scrollUp */ \"./src/modules/scrollUp.js\");\n\n\n\n\n\n\n\n\n\n(0,_modules_togglePopUp__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\n(0,_modules_form__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();\n(0,_modules_navScroll__WEBPACK_IMPORTED_MODULE_2__[\"default\"])();\n(0,_modules_slider__WEBPACK_IMPORTED_MODULE_3__[\"default\"])();\n(0,_modules_sliderCarousel__WEBPACK_IMPORTED_MODULE_4__[\"default\"])();\n(0,_modules_faq__WEBPACK_IMPORTED_MODULE_5__[\"default\"])();\n(0,_modules_scrollUp__WEBPACK_IMPORTED_MODULE_6__[\"default\"])();\n\n//# sourceURL=webpack://electrician_is_website_template/./src/index.js?");
 
 /***/ }),
 
@@ -53,14 +53,14 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
-/***/ "./src/modules/modalWindow.js":
-/*!************************************!*\
-  !*** ./src/modules/modalWindow.js ***!
-  \************************************/
+/***/ "./src/modules/form.js":
+/*!*****************************!*\
+  !*** ./src/modules/form.js ***!
+  \*****************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nvar modalWindow = function modalWindow() {};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (modalWindow);\n\n//# sourceURL=webpack://electrician_is_website_template/./src/modules/modalWindow.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nvar form = function form() {\n  var formName = document.querySelectorAll('#callback input')[0],\n      formPhone = document.querySelectorAll('#callback input')[1];\n  formName.addEventListener('input', function () {\n    formName.value = formName.value.replace(/[^А-Яа-яЕё]/g, '');\n  });\n  formPhone.addEventListener('input', function () {\n    formPhone.value = formPhone.value.replace(/[^0-9\\+]/g, '');\n  });\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (form);\n\n//# sourceURL=webpack://electrician_is_website_template/./src/modules/form.js?");
 
 /***/ }),
 
@@ -71,7 +71,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nvar navScroll = function navScroll() {\n  var body = document.querySelector('body');\n\n  var scrollTo = function scrollTo(elem) {\n    document.querySelector(elem).scrollIntoView({\n      behavior: 'smooth',\n      block: 'start'\n    });\n  };\n\n  body.addEventListener('click', function (event) {\n    var target = event.target;\n\n    if (target.closest('.top-menu')) {\n      event.preventDefault();\n\n      if (target.closest('.top-menu a')) {\n        scrollTo(target.closest('.top-menu a').getAttribute('href'));\n      }\n    }\n  });\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (navScroll);\n/*\r\n    \r\n};\r\n\r\n\r\n    \r\n \r\n    };\r\n}\r\n*/\n\n//# sourceURL=webpack://electrician_is_website_template/./src/modules/navScroll.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nvar navScroll = function navScroll() {\n  var body = document.querySelector('body');\n\n  var scrollTo = function scrollTo(elem) {\n    document.querySelector(elem).scrollIntoView({\n      behavior: 'smooth',\n      block: 'start'\n    });\n  };\n\n  body.addEventListener('click', function (event) {\n    var target = event.target;\n\n    if (target.closest('.top-menu')) {\n      event.preventDefault();\n\n      if (target.closest('.top-menu a')) {\n        scrollTo(target.closest('.top-menu a').getAttribute('href'));\n      }\n\n      ;\n    }\n\n    ;\n  });\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (navScroll);\n\n//# sourceURL=webpack://electrician_is_website_template/./src/modules/navScroll.js?");
 
 /***/ }),
 
@@ -115,7 +115,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nvar togglePopUp = function togglePopUp() {};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (togglePopUp);\n\n//# sourceURL=webpack://electrician_is_website_template/./src/modules/togglePopUp.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nvar togglePopUp = function togglePopUp() {\n  var valueDisplay = function valueDisplay(status) {\n    document.querySelector('.modal-callback').style.display = status;\n    document.querySelector('.modal-overlay').style.display = status;\n  };\n\n  document.querySelector('body').addEventListener('click', function (event) {\n    var target = event.target;\n\n    if (target.closest('#callback')) {\n      event.preventDefault();\n\n      if (target.closest('.modal-close')) {\n        valueDisplay('none');\n      }\n\n      ;\n    } else {\n      if (target.closest('.header a.callback-btn, .button-services')) {\n        valueDisplay('block');\n      } else {\n        valueDisplay('none');\n      }\n\n      ;\n    }\n\n    ;\n  });\n};\n\ntogglePopUp();\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (togglePopUp);\n\n//# sourceURL=webpack://electrician_is_website_template/./src/modules/togglePopUp.js?");
 
 /***/ }),
 
@@ -517,7 +517,7 @@ eval("var map = {\n\t\"./log\": \"./node_modules/webpack/hot/log.js\"\n};\n\n\nf
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
-/******/ 		__webpack_require__.h = () => ("b23dd1abfd2fc8c544b4")
+/******/ 		__webpack_require__.h = () => ("e851180b7fd6afc1538d")
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/global */
