@@ -71,7 +71,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nvar navScroll = function navScroll() {\n  var body = document.querySelector('body');\n\n  var scrollTo = function scrollTo(elem) {\n    document.querySelector(elem).scrollIntoView({\n      behavior: 'smooth',\n      block: 'start'\n    });\n  };\n\n  body.addEventListener('click', function (event) {\n    var target = event.target;\n\n    if (target.closest('.top-menu')) {\n      event.preventDefault();\n\n      if (target.closest('.top-menu a')) {\n        scrollTo(target.closest('.top-menu a').getAttribute('href'));\n      }\n\n      ;\n    }\n\n    ;\n  });\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (navScroll);\n\n//# sourceURL=webpack://electrician_is_website_template/./src/modules/navScroll.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nvar navScroll = function navScroll() {\n  var body = document.querySelector('body');\n\n  var scrollTo = function scrollTo(elem) {\n    document.querySelector(elem).scrollIntoView({\n      behavior: 'smooth',\n      block: 'start'\n    });\n  };\n\n  body.addEventListener('click', function (event) {\n    var target = event.target;\n    target.closest('.top-menu') ? event.preventDefault(target.closest('.top-menu a') ? scrollTo(target.closest('.top-menu a').getAttribute('href')) : '') : '';\n  });\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (navScroll);\n\n//# sourceURL=webpack://electrician_is_website_template/./src/modules/navScroll.js?");
 
 /***/ }),
 
@@ -82,7 +82,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nvar scrollUp = function scrollUp() {\n  var up = document.querySelector('.up'),\n      toggleUp = document.querySelector('.push100');\n  window.addEventListener('scroll', function () {\n    if (window.pageYOffset > toggleUp.offsetTop) {\n      up.style.display = 'block';\n    } else {\n      up.style.display = 'none';\n    }\n\n    ;\n  });\n  up.addEventListener('click', function () {\n    window.scrollTo({\n      top: 0,\n      behavior: 'smooth'\n    });\n  });\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (scrollUp);\n\n//# sourceURL=webpack://electrician_is_website_template/./src/modules/scrollUp.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nvar scrollUp = function scrollUp() {\n  var up = document.querySelector('.up'),\n      toggleUp = document.querySelector('.push100');\n  up.style.display = 'none';\n  window.addEventListener('scroll', function () {\n    window.pageYOffset > toggleUp.offsetTop ? up.style.display = 'block' : up.style.display = 'none';\n  });\n  up.addEventListener('click', function () {\n    window.scrollTo({\n      top: 0,\n      behavior: 'smooth'\n    });\n  });\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (scrollUp);\n\n//# sourceURL=webpack://electrician_is_website_template/./src/modules/scrollUp.js?");
 
 /***/ }),
 
@@ -517,7 +517,7 @@ eval("var map = {\n\t\"./log\": \"./node_modules/webpack/hot/log.js\"\n};\n\n\nf
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
-/******/ 		__webpack_require__.h = () => ("0adaa114194362584103")
+/******/ 		__webpack_require__.h = () => ("5edd65cc27cdedd32e1e")
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/global */

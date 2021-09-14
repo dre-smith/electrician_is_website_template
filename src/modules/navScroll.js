@@ -8,12 +8,7 @@ const navScroll = () => {
     };
     body.addEventListener('click', (event) => {
         let target = event.target;
-        if (target.closest('.top-menu')) {
-            event.preventDefault();
-            if (target.closest('.top-menu a')) {
-                scrollTo(target.closest('.top-menu a').getAttribute('href'));
-            };
-        };
+        target.closest('.top-menu') ? event.preventDefault(target.closest('.top-menu a') ? scrollTo(target.closest('.top-menu a').getAttribute('href')) : '') : '';
     });
 };
 export default navScroll;
