@@ -5,8 +5,8 @@ const togglePopUp = () => {
     };
     document.querySelector('body').addEventListener('click', (event) => {
         const target = event.target;
+        event.preventDefault();
         if (target.closest('#callback')) {
-            event.preventDefault();
             if (target.closest('.modal-close')) {
                 valueDisplay('none');
             };

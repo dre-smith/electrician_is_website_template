@@ -115,7 +115,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nvar togglePopUp = function togglePopUp() {\n  var valueDisplay = function valueDisplay(status) {\n    document.querySelector('.modal-callback').style.display = status;\n    document.querySelector('.modal-overlay').style.display = status;\n  };\n\n  document.querySelector('body').addEventListener('click', function (event) {\n    var target = event.target;\n\n    if (target.closest('#callback')) {\n      event.preventDefault();\n\n      if (target.closest('.modal-close')) {\n        valueDisplay('none');\n      }\n\n      ;\n    } else {\n      if (target.closest('a.callback-btn, .button-services')) {\n        valueDisplay('block');\n      } else {\n        valueDisplay('none');\n      }\n\n      ;\n    }\n\n    ;\n  });\n};\n\ntogglePopUp();\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (togglePopUp);\n\n//# sourceURL=webpack://electrician_is_website_template/./src/modules/togglePopUp.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nvar togglePopUp = function togglePopUp() {\n  var valueDisplay = function valueDisplay(status) {\n    document.querySelector('.modal-callback').style.display = status;\n    document.querySelector('.modal-overlay').style.display = status;\n  };\n\n  document.querySelector('body').addEventListener('click', function (event) {\n    var target = event.target;\n    event.preventDefault();\n\n    if (target.closest('#callback')) {\n      if (target.closest('.modal-close')) {\n        valueDisplay('none');\n      }\n\n      ;\n    } else {\n      if (target.closest('a.callback-btn, .button-services')) {\n        valueDisplay('block');\n      } else {\n        valueDisplay('none');\n      }\n\n      ;\n    }\n\n    ;\n  });\n};\n\ntogglePopUp();\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (togglePopUp);\n\n//# sourceURL=webpack://electrician_is_website_template/./src/modules/togglePopUp.js?");
 
 /***/ }),
 
@@ -517,7 +517,7 @@ eval("var map = {\n\t\"./log\": \"./node_modules/webpack/hot/log.js\"\n};\n\n\nf
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
-/******/ 		__webpack_require__.h = () => ("87e9b41f4ed6549bdd41")
+/******/ 		__webpack_require__.h = () => ("da03a61099d6f2a262d5")
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/global */
