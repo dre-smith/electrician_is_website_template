@@ -1,7 +1,6 @@
 const scrollUp = () => {
     const up = document.querySelector('.up'),
         toggleUp = document.querySelector('.push100');
-
     window.addEventListener('scroll', () => {
         if (window.pageYOffset > toggleUp.offsetTop) {
             up.style.display = 'block';
@@ -9,7 +8,6 @@ const scrollUp = () => {
             up.style.display = 'none';
         };
     });
-
     up.addEventListener('click', () => {
         window.scrollTo({
             top: 0,
@@ -17,5 +15,4 @@ const scrollUp = () => {
         });
     });
 };
-
 export default scrollUp;

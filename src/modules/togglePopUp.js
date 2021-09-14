@@ -5,18 +5,8 @@ const togglePopUp = () => {
     };
     document.querySelector('body').addEventListener('click', (event) => {
         const target = event.target;
-        if (target.closest('#callback')) {
-            event.preventDefault();
-            if (target.closest('.modal-close')) {
-                valueDisplay('none')
-            };
-        } else {
-            if (target.closest('.header a.callback-btn, .button-services')) {
-                valueDisplay('block')
-            } else {
-                valueDisplay('none')
-            };
-        };
+        target.closest('#callback') ? event.preventDefault(target.closest('.modal-close') ? valueDisplay('none') : '') :
+            (target.closest('a.callback-btn, .button-services') ? valueDisplay('block') : valueDisplay('none'));
     });
 };
 togglePopUp();

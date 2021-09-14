@@ -60,7 +60,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nvar form = function form() {\n  var formName = document.querySelectorAll('#callback input')[0],\n      formPhone = document.querySelectorAll('#callback input')[1];\n  formName.addEventListener('input', function () {\n    formName.value = formName.value.replace(/[^А-Яа-яЕё]/g, '');\n  });\n  formPhone.addEventListener('input', function () {\n    formPhone.value = formPhone.value.replace(/[^0-9\\+]/g, '');\n  });\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (form);\n\n//# sourceURL=webpack://electrician_is_website_template/./src/modules/form.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nvar form = function form() {\n  var formName = document.querySelector('#callback input'),\n      formPhone = document.querySelector('#callback input.tel');\n  formName.addEventListener('input', function () {\n    formName.value = formName.value.replace(/[^А-Яа-яЕё]/g, '');\n  });\n  formPhone.addEventListener('input', function () {\n    formPhone.value = formPhone.value.replace(/[^0-9\\+]/g, '');\n  });\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (form);\n\n//# sourceURL=webpack://electrician_is_website_template/./src/modules/form.js?");
 
 /***/ }),
 
@@ -115,7 +115,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nvar togglePopUp = function togglePopUp() {\n  var valueDisplay = function valueDisplay(status) {\n    document.querySelector('.modal-callback').style.display = status;\n    document.querySelector('.modal-overlay').style.display = status;\n  };\n\n  document.querySelector('body').addEventListener('click', function (event) {\n    var target = event.target;\n\n    if (target.closest('#callback')) {\n      event.preventDefault();\n\n      if (target.closest('.modal-close')) {\n        valueDisplay('none');\n      }\n\n      ;\n    } else {\n      if (target.closest('.header a.callback-btn, .button-services')) {\n        valueDisplay('block');\n      } else {\n        valueDisplay('none');\n      }\n\n      ;\n    }\n\n    ;\n  });\n};\n\ntogglePopUp();\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (togglePopUp);\n\n//# sourceURL=webpack://electrician_is_website_template/./src/modules/togglePopUp.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nvar togglePopUp = function togglePopUp() {\n  var valueDisplay = function valueDisplay(status) {\n    document.querySelector('.modal-callback').style.display = status;\n    document.querySelector('.modal-overlay').style.display = status;\n  };\n\n  document.querySelector('body').addEventListener('click', function (event) {\n    var target = event.target;\n    target.closest('#callback') ? event.preventDefault(target.closest('.modal-close') ? valueDisplay('none') : '') : target.closest('a.callback-btn, .button-services') ? valueDisplay('block') : valueDisplay('none');\n  });\n};\n\ntogglePopUp();\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (togglePopUp);\n\n//# sourceURL=webpack://electrician_is_website_template/./src/modules/togglePopUp.js?");
 
 /***/ }),
 
@@ -517,7 +517,7 @@ eval("var map = {\n\t\"./log\": \"./node_modules/webpack/hot/log.js\"\n};\n\n\nf
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
-/******/ 		__webpack_require__.h = () => ("e851180b7fd6afc1538d")
+/******/ 		__webpack_require__.h = () => ("0adaa114194362584103")
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/global */
