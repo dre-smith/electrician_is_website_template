@@ -11,7 +11,7 @@ const togglePopUp = () => {
                 valueDisplay('none');
             };
         } else {
-            if (target.closest('a.callback-btn, .button-services')) {
+            if (target.closest('a.callback-btn, a.absolute, .button-services')) {
                 valueDisplay('block');
             } else {
                 valueDisplay('none');
