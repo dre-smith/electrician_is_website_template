@@ -49,7 +49,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _mod
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nvar faq = function faq() {\n  var toggleElement = document.querySelectorAll('.accordeon .element'),\n      buttonTitle = document.querySelectorAll('.accordeon .title'),\n      elementContent = document.querySelectorAll('.accordeon .element-content');\n\n  var changeContent = function changeContent() {\n    toggleElement.classList.toggle('active');\n    elementContent.style.display == 'none' ? elementContent.style.display = 'block' : elementContent.style.display = 'none';\n  };\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (faq);\n\n//# sourceURL=webpack://electrician_is_website_template/./src/modules/faq.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nvar faq = function faq() {\n  var toggleElement = document.querySelectorAll('.accordeon .element'),\n      buttonTitle = document.querySelectorAll('.accordeon .title'),\n      elementContent = document.querySelectorAll('.accordeon .element-content');\n  buttonTitle.forEach(function (elem, index) {\n    toggleElement[index].classList.remove('active');\n    elementContent[index].style.display = 'none';\n    elem.addEventListener('click', function () {\n      toggleElement[index].classList.toggle('active');\n      elementContent[index].style.display == 'none' ? elementContent[index].style.display = 'block' : elementContent[index].style.display = 'none';\n    });\n  });\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (faq);\n\n//# sourceURL=webpack://electrician_is_website_template/./src/modules/faq.js?");
 
 /***/ }),
 
@@ -517,7 +517,7 @@ eval("var map = {\n\t\"./log\": \"./node_modules/webpack/hot/log.js\"\n};\n\n\nf
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
-/******/ 		__webpack_require__.h = () => ("da03a61099d6f2a262d5")
+/******/ 		__webpack_require__.h = () => ("2671b11ea0613a8f2af6")
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/global */
