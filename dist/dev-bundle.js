@@ -49,7 +49,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _mod
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nvar faq = function faq() {\n  var toggleElement = document.querySelectorAll('.accordeon .element'),\n      buttonTitle = document.querySelectorAll('.accordeon .title'),\n      elementContent = document.querySelectorAll('.accordeon .element-content');\n  buttonTitle.forEach(function (elem, index) {\n    toggleElement[index].classList.remove('active');\n    elementContent[index].style.display = 'none';\n    elem.addEventListener('click', function () {\n      toggleElement[index].classList.toggle('active');\n      elementContent[index].style.display == 'none' ? elementContent[index].style.display = 'block' : elementContent[index].style.display = 'none';\n    });\n  });\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (faq);\n\n//# sourceURL=webpack://electrician_is_website_template/./src/modules/faq.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nvar faq = function faq() {\n  var toggleElement = document.querySelectorAll('.accordeon .element'),\n      buttonTitle = document.querySelectorAll('.accordeon .title'),\n      elementContent = document.querySelectorAll('.accordeon .element-content');\n  buttonTitle.forEach(function (elem, index) {\n    var closeAllElements = function closeAllElements() {\n      for (var i = 0; i < buttonTitle.length; i++) {\n        toggleElement[i].classList.remove('active');\n        elementContent[i].style.display = 'none';\n      }\n\n      ;\n    };\n\n    elem.addEventListener('click', function () {\n      closeAllElements();\n      toggleElement[index].classList.add('active');\n      elementContent[index].style.display == 'none' ? elementContent[index].style.display = 'block' : elementContent[index].style.display = 'none';\n    });\n  });\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (faq);\n\n//# sourceURL=webpack://electrician_is_website_template/./src/modules/faq.js?");
 
 /***/ }),
 
@@ -93,7 +93,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nvar slider = function slider() {};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (slider);\n\n//# sourceURL=webpack://electrician_is_website_template/./src/modules/slider.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nvar slider = function slider() {\n  var slide = document.querySelectorAll('.item'),\n      slider = document.querySelector('.top-slider');\n  var slickDots = document.createElement('ul');\n  slider.insertAdjacentElement('beforeend', slickDots).classList.add('slick-dots');\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (slider);\n\n//# sourceURL=webpack://electrician_is_website_template/./src/modules/slider.js?");
 
 /***/ }),
 
@@ -517,7 +517,7 @@ eval("var map = {\n\t\"./log\": \"./node_modules/webpack/hot/log.js\"\n};\n\n\nf
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
-/******/ 		__webpack_require__.h = () => ("310a2da8423fb2fa2b19")
+/******/ 		__webpack_require__.h = () => ("2d970e6cb51a7bafe30f")
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/global */
