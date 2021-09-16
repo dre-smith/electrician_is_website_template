@@ -18,21 +18,21 @@ const slider = () => {
     style.id = 'slider__style';
     document.head.appendChild(style);
     document.getElementById('slider__style').textContent = `
-        .top-slider .slick-dots {
-			z-index: 10;
-		}
-		.top-slider .item {
-			position: static;
-			display: none;
-		}
-		.top-slider .relative {
-            position: relative;
-			display: block;
-		}
-		.top-slider .table {
-			opacity: 1;
-			visibility: visible;
-		}`;
+    .top-slider .slick-dots {
+        z-index: 10;
+    }
+    .top-slider .item {
+        position: static;
+        display: none;
+    }
+    .top-slider .relative {
+        position: relative;
+        display: block;
+    }
+    .top-slider .table {
+        opacity: 1;
+        visibility: visible;
+    }`;
     const addDot = () => {
         const slickDots = document.querySelector('.slick-dots');
         slide.forEach(() => {
