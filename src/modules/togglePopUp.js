@@ -5,13 +5,13 @@ const togglePopUp = () => {
     };
     document.querySelector('body').addEventListener('click', (event) => {
         const target = event.target;
-        event.preventDefault();
         if (target.closest('#callback')) {
             if (target.closest('.modal-close')) {
                 valueDisplay('none');
             };
         } else {
             if (target.closest('a.callback-btn, a.absolute, .button-services')) {
+                event.preventDefault();
                 valueDisplay('block');
             } else {
                 valueDisplay('none');
@@ -19,5 +19,4 @@ const togglePopUp = () => {
         };
     });
 };
-togglePopUp();
 export default togglePopUp;
