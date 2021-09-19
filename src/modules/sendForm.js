@@ -1,48 +1,51 @@
 const sendForm = () => {
     const errorMessage = 'Ошибка!',
-        loadMessage = 'Идет отправка...',
-        successMessage = 'Отправлено!';
-    const postData = body => fetch('./server.php', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(body)
-    });
-    const clearInput = () => {
-        const inputName = document.querySelector(`#callback input[name='fio']`),
-            inputPhone = document.querySelector(`#callback input[name='tel']`);
-        inputName.value = '';
-        inputPhone.value = '';
-    };
-    const loadForm = form => {
-        const statusMessage = document.createElement('div');
-        form.append(statusMessage);
-        statusMessage.style.display = 'block';
+        loadMessage = 'Идёт отправка...',
+        successMessage = 'Отправлено!',
+        form = document.querySelector(`form[name='form-callback']`),
+        statusMessage = document.createElement('div');
+
+    statusMessage.style.cssText = 'font-weight: bold';
+
+    form.addEventListener('submit', (event) => {
+        const input = form.querySelectorAll(`input[type='text']`);
+        event.preventDefault();
+        form.appendChild(statusMessage);
         statusMessage.textContent = loadMessage;
-        postData(Object.fromEntries(new FormData(form)))
-            .then(response => {
-                if (response.status !== 200) throw new Error(`Status network ${request.status} `);
+        const formData = new FormData(form);
+        let body = {};
+        formData.forEach((val, key) => {
+            body[key] = val;
+        });
+
+        const postData = (body) => {
+            return fetch('./server.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(body),
+            });
+        };
+        postData(body)
+            .then((response) => {
+                if (response.status !== 200) {
+                    throw new Error('status network not 200');
+                };
                 statusMessage.textContent = successMessage;
                 setTimeout(() => {
+                    statusMessage.textContent = ''
+                    document.querySelector('.modal-callback').style.display = 'none';
                     document.querySelector('.modal-overlay').style.display = 'none';
-                    document.getElementById('callback').style.display = 'none';
-                    statusMessage.textContent = '';
                 }, 3000);
+                input.forEach((input) => {
+                    input.value = '';
+                });
             })
             .catch(() => {
                 statusMessage.textContent = errorMessage;
-                setTimeout(() => {
-                    statusMessage.style.display = 'none';
-                    statusMessage.textContent = '';
-                }, 3000);
+                setTimeout(() => (statusMessage.textContent = ''), 3000);
             });
-        clearInput();
-    };
-    document.body.addEventListener('submit', event => {
-        event.preventDefault();
-        const target = event.target;
-        loadForm(target);
     });
 };
 export default sendForm;

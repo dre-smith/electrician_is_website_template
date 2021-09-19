@@ -1,23 +1,14 @@
 const form = () => {
-    const name = document.querySelector(`#callback input[name=fio]`),
-        phone = document.querySelector(`#callback input[name=tel]`),
-        inputs = document.querySelectorAll(`#callback input[name=fio], #callback input[name=tel]`);
-
-    inputs.forEach((elem, index) => {
-        elem.maxLength = 16;
-        elem.addEventListener('input', () => {
-            if (index == 0) {
-                elem.value = elem.value.replace(/[^А-Яа-яЕё]/g, '');
-            };
-            if (index == 1) {
-                elem.value = elem.value.replace(/[^\d+]/g, '');
-            };
-        });
-        elem.addEventListener('blur', () => {
-            if (elem.value.length < 3) {
-                elem.value = '';
-            };
-        });
+    document.body.addEventListener('input', event => {
+        const target = event.target;
+        if (target.name === 'fio') {
+            target.setAttribute('pattern', '[А-ЯЁ]{1}[а-яё]{1,19}');
+            target.setAttribute('maxlength', 20);
+            target.value = target.value.replace(/[^А-Яёа-яё ]/gi, '');
+        };
+        if (target.name === 'tel') {
+            target.setAttribute('pattern', '[0-9+()-]{16}');
+        };
     });
 };
 export default form;

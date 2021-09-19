@@ -7,6 +7,7 @@ const togglePopUp = () => {
         const target = event.target;
         if (target.closest('#callback')) {
             if (target.closest('.modal-close')) {
+                event.preventDefault();
                 valueDisplay('none');
             };
         } else {
@@ -14,6 +15,7 @@ const togglePopUp = () => {
                 event.preventDefault();
                 valueDisplay('block');
             } else {
+                event.preventDefault();
                 valueDisplay('none');
             };
         };
